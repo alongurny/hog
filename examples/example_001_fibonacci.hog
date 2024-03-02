@@ -1,0 +1,23 @@
+env <-
+
+env.libs::{
+    @cli
+    arith::{
+        @fn
+        @recurse
+        @(-)
+    }
+}
+
+# Not yet sure how to add "type signatures"
+fibonacci = recurse f => {
+    # These are lambda expressions
+    0 => 0
+    n => f(n-1)
+}
+
+cli.app {
+    input <- scan "Enter input: "
+    output = fibonacci input
+    print "{output=}
+}
