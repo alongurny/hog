@@ -1,0 +1,9 @@
+env =>
+
+env.libs::{
+    @cli
+}
+
+cli.app {
+    cli.print "Hello, world!"
+}
